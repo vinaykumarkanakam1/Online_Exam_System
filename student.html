@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Student Dashboard | Examify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+<div id="toast"></div>
+<aside class="sidebar" id="sidebar">
+  <a class="brand side-brand" href="student.html"><span class="brand-icon">✦</span><span>Exam<span>ify</span></span></a>
+  <div class="user-mini"><div class="avatar" id="sideAvatar">S</div><div><b id="sideName">Student</b><small>Student</small></div></div>
+  <nav class="side-nav"><a class="active" href="#dashboard" data-section="dashboard">⌂ <span>Dashboard</span></a><a href="#exams" data-section="exams">▣ <span>Available Exams</span></a><a href="#history" data-section="history">◴ <span>My Results</span></a><a href="#profile" data-section="profile">◉ <span>Profile</span></a></nav>
+  <button class="logout side-logout" id="logoutBtn">↪ <span>Logout</span></button>
+</aside>
+<div class="app-main">
+<header class="app-header"><button class="mobile-side" id="sideToggle">☰</button><div><span class="header-kicker">STUDENT PORTAL</span><h2 id="pageTitle">Dashboard</h2></div><div class="header-user"><span id="headerName">Student</span><div class="avatar small" id="headerAvatar">S</div></div></header>
+<main class="app-content">
+<section class="page-section active" id="dashboardSection">
+  <div class="welcome-banner"><div><span class="eyebrow light">STUDENT DASHBOARD</span><h1>Welcome back, <span id="welcomeName">Student</span>!</h1><p>Department: <b id="welcomeDepartment">CSE</b> • Your exams are filtered for your branch.</p></div><div class="banner-art">✦</div></div>
+  <div class="stats-grid"><div class="stat-card"><div class="stat-icon purple">▣</div><div><b id="availableCount">0</b><span>Available Exams</span></div></div><div class="stat-card"><div class="stat-icon blue">✓</div><div><b id="completedCount">0</b><span>Completed</span></div></div><div class="stat-card"><div class="stat-icon green">★</div><div><b id="averageScore">0%</b><span>Average Score</span></div></div><div class="stat-card"><div class="stat-icon orange">◷</div><div><b id="attemptedCount">0</b><span>Total Attempts</span></div></div></div>
+  <div class="section-row"><div><h3>Available Exams</h3><p class="muted">Choose an exam to begin.</p></div><button class="text-btn" data-goto="exams">View all →</button></div>
+  <div class="exam-grid" id="dashboardExams"></div>
+</section>
+
+<section class="page-section" id="examsSection"><div class="section-row"><div><h3>Available Exams</h3><p class="muted">Published exams are ready to attempt.</p></div></div><div class="exam-grid" id="allExams"></div></section>
+
+<section class="page-section" id="historySection"><div class="section-row"><div><h3>My Results</h3><p class="muted">Your completed examination history.</p></div></div><div class="table-card"><div class="table-wrap"><table><thead><tr><th>Exam</th><th>Date</th><th>Score</th><th>Percentage</th><th>Status</th></tr></thead><tbody id="resultTable"></tbody></table></div></div></section>
+
+<section class="page-section" id="profileSection"><div class="section-row"><div><h3>My Profile</h3><p class="muted">Manage your basic profile information.</p></div></div><div class="profile-card"><div class="profile-large" id="profileAvatar">S</div><div><h3 id="profileName">Student</h3><p id="profileEmail">student@example.com</p><span class="status-badge live" id="profileDepartment">CSE</span></div></div></section>
+
+<section class="page-section" id="examSection">
+  <div class="exam-shell">
+    <div class="exam-top"><div><span class="header-kicker" id="examSubject">EXAM</span><h2 id="examTitle">Exam</h2></div><div class="timer" id="examTimer">60:00</div></div>
+    <div class="exam-layout"><div class="question-panel"><div class="question-meta"><span id="questionNumber">Question 1 of 10</span><span id="questionMarks">1 mark</span></div><div class="question-text" id="questionText"></div><div class="options" id="options"></div><div class="exam-controls"><button class="btn btn-secondary" id="prevQuestion">← Previous</button><button class="btn btn-primary" id="nextQuestion">Next →</button></div></div>
+    <aside class="palette-card"><h4>Question Palette</h4><div class="palette" id="palette"></div><div class="palette-legend"><span><i class="dot answered"></i> Answered</span><span><i class="dot current"></i> Current</span><span><i class="dot"></i> Unanswered</span></div><button class="btn btn-danger btn-full" id="submitExam">Submit Exam</button></aside></div>
+  </div>
+</section>
+</main></div>
+<script src="js/app.js"></script><script src="js/student.js"></script>
+</body></html>
