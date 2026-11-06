@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<template id="page-template">
 <header class="navbar">
   <div class="nav-container">
     <a class="brand" href="#home"><span class="brand-icon">✦</span><span>Exam<span>ify</span></span></a>
@@ -73,7 +73,7 @@
 
 <section class="section" id="about">
   <div class="container about-grid">
-    <div><span class="eyebrow">ABOUT THE PROJECT</span><h2>A complete frontend foundation for an online exam system.</h2><p>This project demonstrates a production-style frontend architecture using HTML, CSS and JavaScript. Data is stored in your browser with localStorage, making the demo functional without a server.</p><div class="check-list"><span>✓ Responsive design</span><span>✓ Student and admin roles</span><span>✓ Automatic scoring</span><span>✓ Persistent browser data</span></div></div>
+    <div><span class="eyebrow">ABOUT THE PROJECT</span><h2>A complete frontend foundation for an online exam system.</h2><p>This project uses React and Vite for its frontend, with browser localStorage keeping the demo functional without a server.</p><div class="check-list"><span>✓ Responsive design</span><span>✓ Student and admin roles</span><span>✓ Automatic scoring</span><span>✓ Persistent browser data</span></div></div>
     <div class="about-card"><div class="big-number">01</div><h3>Built for extension</h3><p>You can connect this frontend to Node.js, Java, PHP, Firebase, MySQL or another backend later.</p></div>
   </div>
 </section>
@@ -110,6 +110,8 @@
     </form>
   </div>
 </div>
-<script src="js/app.js"></script>
+</template>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
